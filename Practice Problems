@@ -1,0 +1,49 @@
+-- LECTURE NOTES - SELECT
+ SELECT * FROM actor;
+ SELECT first_name, last_name FROM  actor;
+ -- PRACTICE PROBLEM #1
+ SELECT first_name,last_name,email FROM customer;
+ 
+-- LECTURE NOTES - SELECT DISTINCT
+SELECT DISTINCT rental_rate FROM film;
+-- PRACTICE PROBLEM #2 
+SELECT DISTINCT rating FROM film;
+
+-- LECTURE NOTES - SELECT COUNT
+SELECT COUNT(DISTINCT amount) FROM payment;
+-- LECTURE NOTES - SELECT WHERE
+SELECT * FROM customer
+WHERE first_name = 'Jared';
+--
+SELECT COUNT (title) FROM film 
+WHERE rental_rate > 4 AND replacement_cost >= 19.99
+AND rating = 'R';
+-- 
+SELECT * FROM film
+WHERE rating != 'R';
+-- PRACTICE PROBLEM #3 
+SELECT email FROM customer
+WHERE first_name = 'Nancy' 
+AND last_name = 'Thomas';
+-- PRACTICE PROBLEM #4 
+SELECT description FROM film 
+WHERE title = 'Outlaw Hanky';
+--PRACTICE PROBLEM #5 
+SELECT phone FROM address 
+WHERE address = '259 Ipoh Drive';
+-- LECTURE NOTES - ORDER BY
+SELECT store_id,first_name,last_name FROM customer
+ORDER BY store_id DESC,first_name ASC;
+--LECTURE NOTES - LIMIT
+SELECT * FROM payment
+ORDER BY payment_date LIMIT 5;
+--PRACTICE PROBLEM #6
+SELECT customer_id FROM payment
+ORDER BY payment_date LIMIT 10;
+--PRACTICE PROBLEM #7
+SELECT title,length FROM film
+ORDER BY length ASC 
+LIMIT 5;
+-- BONUS QUESTION
+SELECT COUNT(title) FROM film
+WHERE length <= '50'

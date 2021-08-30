@@ -54,3 +54,15 @@ WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';
 SELECT * FROM customer
 WHERE first_name IN ('John','Jake','Julie');
 -- LECTURE NOTES - LIKE AND ILIKE
+-- LIKE - CASE SENSITIVE // ILIKE - CASE INSENSITIVE
+SELECT * FROM customer
+WHERE first_name LIKE 'J%' AND last_name LIKE 'S%';
+--
+SELECT * FROM customer
+WHERE first_name LIKE '_her%';
+-- GENERAL CHALLENGE #1
+SELECT COUNT (amount) FROM payment
+WHERE amount > 5;
+-- GENERAL CHALLENGE #2
+SELECT COUNT (*) FROM staff
+WHERE first_name LIKE '%P';

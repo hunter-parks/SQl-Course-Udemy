@@ -66,3 +66,13 @@ WHERE amount > 5;
 -- GENERAL CHALLENGE #2
 SELECT COUNT (*) FROM staff
 WHERE first_name LIKE '%P';
+-- GENERAL CHALLENGE #3
+SELECT COUNT (DISTINCT district) FROM address;
+-- GENERAL CHALLENGE #4 
+SELECT DISTINCT district FROM address;
+-- GENERAL CHALLENGE #5 
+SELECT COUNT (*) FROM film
+WHERE rating = 'R' AND replacement_cost BETWEEN 5 AND 15;
+-- GENERAL CHALLENGE #6 
+SELECT COUNT(*) FROM film
+WHERE title LIKE '%Truman%';

@@ -97,3 +97,15 @@ ORDER BY SUM(amount);
 SELECT DATE(payment_date),SUM(amount) FROM payment
 GROUP BY DATE(payment_date)
 ORDER BY SUM(amount) ASC
+-- CHALLENGES - GROUP BY 
+-- #1
+SELECT staff_id,COUNT(amount) FROM payment
+GROUP BY staff_id;
+-- #2
+SELECT rating,ROUND(AVG(replacement_cost),2) FROM film
+GROUP BY rating;
+-- #3
+SELECT customer_id,SUM(amount) FROM payment
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC
+LIMIT 5;

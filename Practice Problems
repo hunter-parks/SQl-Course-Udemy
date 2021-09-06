@@ -85,3 +85,15 @@ SELECT ROUND(AVG(replacement_cost),2) FROM film;
 -- SUM
 SELECT SUM(replacement_cost) 
 FROM film;
+-- GROUP BY clause must appear right after a FROM or WHERE statement
+SELECT customer_id, SUM(amount) FROM payment
+GROUP BY customer_id
+ORDER BY COUNT(amount) DESC;
+
+SELECT customer_id,staff_id,SUM(amount) FROM payment
+GROUP BY staff_id, customer_id
+ORDER BY SUM(amount);
+
+SELECT DATE(payment_date),SUM(amount) FROM payment
+GROUP BY DATE(payment_date)
+ORDER BY SUM(amount) ASC

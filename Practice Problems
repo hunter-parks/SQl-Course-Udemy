@@ -186,3 +186,13 @@ WHERE inventory.film_id IS NULL
 -- RIGHT JOIN TableB
 -- ON TableA.col_match = TableB.col_match
 -- WHERE TableA.id IS NULL
+-- LECTURE - UNIONS
+-- SELECT column_name(s) FROM table1
+-- UNION
+-- SELECT column_name(s) FROM table2;
+
+-- JOIN CHALLENGES
+SELECT district,email FROM address
+INNER JOIN customer ON
+address.address_id = customer.address_id
+WHERE district = 'California'

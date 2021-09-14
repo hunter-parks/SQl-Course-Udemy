@@ -204,3 +204,33 @@ INNER JOIN film
 ON film_actor.film_id = film.film_id
 WHERE first_name = 'Nick'
 AND last_name = 'Wahlberg';
+-- ADVANCED SQL TOPICS
+-- TIMESTAMPS/EXTRACT - PART 1
+-- TIME - contains ONLY time
+-- DATE - contains ONLY date 
+-- TIMESTAMP - contains date and time
+-- TIMESTAMPTZ - contains date,time, and timezone
+-- Depending on the situation, you may not need full TIMESTAMPTZ
+-- YOU CAN ALWAYS REMOVE HISTORICAL INFORMATION, BUT NEVER ADD IT IN
+SELECT CURRENT_DATE;
+SELECT CURRENT_TIME;
+-- EXTRACT()
+-- Allows you to "extract" or obtain a sub-component of a date value 
+-- YEAR,MONTH,DAY,WEEK,QUARTER
+-- AGE()
+/* Calculates and returns the current age given a timestamp */
+-- USAGE
+/* AGE(date_col) */
+-- RETURNS 
+/* 13 years 1 mon 5 days 
+hours,minutes,seconds - 01:34:13.003423 
+*/
+-- TO_CHAR()
+/* General function to convert data types to text 
+   Useful for timestamp formatting 
+*/
+-- USAGE 
+/* TO_CHAR(date_col,'mm-dd-yyyy') */
+-- Examples!!
+SELECT TO_CHAR(payment_date,'')
+FROM payment

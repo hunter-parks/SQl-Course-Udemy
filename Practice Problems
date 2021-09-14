@@ -246,3 +246,13 @@ WHERE EXTRACT(DOW FROM payment_date)= 1;
 SELECT ROUND(rental_rate/replacement_cost,2) * 100 AS percent_cost
 FROM film;
 SELECT 0.1 * replacement_cost AS deposit FROM film;
+
+-- STRING FUNCTIONS AND OPERATIONS
+ -- getting the length
+SELECT LENGTH(first_name) FROM customer;
+-- string concatenation
+SELECT first_name || '--' || last_name AS full_name
+FROM customer; 
+-- complex example of string concat
+SELECT LOWER (LEFT(first_name,1)) || LOWER (last_name) || '@gmail.com'
+FROM customer;

@@ -232,5 +232,12 @@ hours,minutes,seconds - 01:34:13.003423
 -- USAGE 
 /* TO_CHAR(date_col,'mm-dd-yyyy') */
 -- Examples!!
-SELECT TO_CHAR(payment_date,'')
+SELECT TO_CHAR(payment_date,'MM/dd/YYYY')
+FROM payment;
+-- TIMESTAMPS AND EXTRACT CHALLENGES 
+-- #1 
+SELECT DISTINCT(TO_CHAR(payment_date,'Month')) FROM payment;
+-- #2
+SELECT COUNT(*)
 FROM payment
+WHERE EXTRACT(DOW FROM payment_date)= 1;

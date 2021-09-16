@@ -278,3 +278,10 @@ FROM rental
 INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id
 WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 ORDER BY title;
+-- EXISTS OPERATOR 
+SELECT first_name,last_name
+FROM customer AS c 
+WHERE EXISTS 
+(SELECT * FROM payment AS p 
+WHERE p.customer_id = c.customer_id
+AND amount > 11);

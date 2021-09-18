@@ -285,3 +285,9 @@ WHERE EXISTS
 (SELECT * FROM payment AS p 
 WHERE p.customer_id = c.customer_id
 AND amount > 11);
+
+-- LECTURE - SELF JOIN - join of two copies of the same table
+/* Useful for comparing values in a column 
+   of rows within the same table 
+   When using self join, it is NECESSARY to use an alias 
+   for the table, otherwise tables = ambiguous */

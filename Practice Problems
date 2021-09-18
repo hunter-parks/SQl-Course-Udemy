@@ -291,3 +291,9 @@ AND amount > 11);
    of rows within the same table 
    When using self join, it is NECESSARY to use an alias 
    for the table, otherwise tables = ambiguous */
+   
+   -- EXAMPLE SYNTAX 
+/* SELECT tableA.col,tableB.col
+   FROM table AS tableA
+   JOIN table AS tableB ON 
+   tableA.some_col = tableB.other_col */

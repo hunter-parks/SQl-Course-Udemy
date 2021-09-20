@@ -329,3 +329,15 @@ SELECT MAX (joindate) FROM cd.members;
 -- QUESTION 10
 SELECT COUNT (name) FROM cd.facilities
 WHERE guestcost >= 10;
+-- QUESTION 11
+SELECT facid, SUM(slots) AS Total_Number_of_Slots
+FROM cd.bookings
+WHERE cd.bookings.starttime BETWEEN '2012-09-01' AND '2012-09-30'
+GROUP by facid
+ORDER BY SUM(slots);
+-- QUESTION 12 
+SELECT facid, SUM(slots) AS Total_Number_of_Slots
+FROM cd.bookings
+GROUP BY facid
+HAVING SUM(slots) > 1000
+ORDER BY facid;

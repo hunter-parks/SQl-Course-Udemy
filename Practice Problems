@@ -341,3 +341,15 @@ FROM cd.bookings
 GROUP BY facid
 HAVING SUM(slots) > 1000
 ORDER BY facid;
+-- QUESTION 13
+SELECT starttime, name
+FROM cd.bookings
+INNER JOIN cd.facilities ON cd.facilities.facid = cd.bookings.facid
+WHERE name LIKE '%Tennis Court%' AND starttime BETWEEN '2012-09-21 00:00:00' AND '2012-09-21 23:59:59' 
+ORDER BY starttime;
+-- QUESTION 14
+SELECT starttime
+FROM cd.bookings
+INNER JOIN cd.members ON cd.members.memid = cd.bookings.memid
+WHERE surname LIKE '%Farrell%' AND firstname LIKE '%David%'
+ORDER BY starttime;

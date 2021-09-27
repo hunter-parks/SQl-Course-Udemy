@@ -375,5 +375,18 @@ Array - Stores an array of strings, numbers,etc
 /* 
 	Primary Key - column or group of columns used to 
 	identify a row uniquely in a table
+		
+	Foreign Key - a field or group of fields in a 
+	table that uniquely identifies a row in another
+	table. Defined in a table that references to the 
+	primary key of the other table
 	
+	the table that contains the foreign key is called 
+	referencing table or child table.
+	the table the foreign key references is called 
+	the parent table
+	
+	A table can have multiple foreign keys depending 
 */
+
+	

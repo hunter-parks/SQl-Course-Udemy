@@ -498,3 +498,28 @@ WHERE
 -- UPDATE account
 -- SET last_login = CURRENT_TIMESTAMP
 -- RETURNING email,created_on,last_login
+
+
+-- DELETE CLAUSE - To remove rows from a table
+
+-- DELETE FROM job
+-- WHERE job_name = 'Cowboy'
+-- RETURNING job_id,job_name
+
+-- ALTER CLAUSE - Allows for changes to an existing table structure
+-- General Syntax - ALTER TABLE table_name action
+
+-- CREATE TABLE information(
+-- 	info_id SERIAL PRIMARY KEY,
+-- 	title VARCHAR(500) NOT NULL,
+-- 	person VARCHAR(50) NOT NULL UNIQUE
+-- )
+-- ALTER TABLE information 
+-- RENAME TO new_info
+-- ALTER TABLE new_info
+-- ALTER COLUMN people DROP NOT NULL
+-- INSERT INTO new_info(title)
+-- VALUES
+-- ('some new title')
+
+

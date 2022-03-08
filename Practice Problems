@@ -474,3 +474,27 @@ INSERT INTO table_name (column1,column2,..)
 VALUES 
 	(value1,value2,...),
 	(value1,value2,...)...;
+	
+
+-- UPDATE - Allows for the changing of values of the columns in a table
+/* General Syntax
+UPDATE table 
+SET column1 = value1,
+	column2 = value2,...
+WHERE 
+	condition; */ 
+	
+-- UPDATE account
+-- SET last_login = CURRENT_TIMESTAMP;
+-- UPDATE account
+-- SET last_login = created_on;
+
+-- UPDATING  BASED OFF RESULTS OF ANOTHER TABLE
+-- UPDATE account_job
+-- SET hire_date = account.created_on
+-- FROM account
+-- WHERE account_job.user_id = account.user_id
+
+-- UPDATE account
+-- SET last_login = CURRENT_TIMESTAMP
+-- RETURNING email,created_on,last_login
